@@ -1,0 +1,142 @@
+# 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
+# 创建的文件:27.04.2017 09:27:58
+
+newmtl M_MGC_mobaohounaoshao
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka mobaochaifen\T_MGC_hounaoshao+.jpg
+	map_Kd mobaochaifen\T_MGC_hounaoshao+.jpg
+
+newmtl M_MGC_mobaolian
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka mobaochaifen\T_MGC_lian+.jpg
+	map_Kd mobaochaifen\T_MGC_lian+.jpg
+
+newmtl M_MGC_mobaojijiao
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka mobaochaifen\T_MGC_jijiao+.jpg
+	map_Kd mobaochaifen\T_MGC_jijiao+.jpg
+
+newmtl M_MGC_mobaoerduo
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka mobaochaifen\T_MGC_erduo+.jpg
+	map_Kd mobaochaifen\T_MGC_erduo+.jpg
+
+newmtl M_MGC_mobaoyanzui
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka mobaochaifen\T_MGC_yanzui+.jpg
+	map_Kd mobaochaifen\T_MGC_yanzui+.jpg
+
+newmtl M_MGC_mobaoyanjing
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka mobaochaifen\T_MGC_yanjing+.jpg
+	map_Kd mobaochaifen\T_MGC_yanjing+.jpg
+
+newmtl M_MGC_mobaodudoudai
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka mobaochaifen\T_MGC_dudoudai+.jpg
+	map_Kd mobaochaifen\T_MGC_dudoudai+.jpg
+
+newmtl M_MGC_mobaodudou
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka mobaochaifen\T_MGC_dudou+.jpg
+	map_Kd mobaochaifen\T_MGC_dudou+.jpg
+
+newmtl M_MGC_mobaochibang
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka mobaochaifen\T_MGC_chiban.jpg
+	map_Kd mobaochaifen\T_MGC_chiban.jpg
+
+newmtl M_MGC_mobaodise
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka mobaochaifen\T_MGC_dise+.jpg
+	map_Kd mobaochaifen\T_MGC_dise+.jpg
