@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OBJMTLoader</title>
+    <script src="three.js"></script>
+    <script src="OrbitControls.js"></script>
+    <script src="DDSLoader.js"></script>
+    <script src="OBJLoader.js"></script>
+    <script src="MTLLoader.js"></script>
+</head>
+<body>
+    <script>
+        //创建场景
+        var scene = new THREE.Scene();
+
+        //创建网格模型、颜色、长宽高
+        var geometry = new THREE.BoxGeometry(100, 100, 100);
+        var material = new THREE.MeshLambertMaterial({color:0xff0000});
+        var mesh = new THREE.Mesh(geometry,material);
+        scene.add(mesh);
+
+
+        // 这代码是对下面OBJ和MTL文件引入铺垫
+        var onProgress = function(xhr){
+            if(xhr.lenthComputable){
+                var percentComplete = xhr.loaded / xhr.total * 100;
+                console.log(Math.round(percentComplete, 2) + '%downloaded');
+            }
+        };
+
+        var onError = function(xhr){
+
+        };
+        THREE.Loader.Handlers.add(/\.dds$/i, new THREE.DDSLoader());
+//        加载Obj模型
+//       var loader = new THREE.OBJLoader();
+//       loader.load('mobao/mobaochaifen.obj',function(mobaoobj){
+//          mobaoobj.scale.set(3, 3, 3);
+//          mobaoobj.position.y=60;
+//          scene.add(mobaoobj);
+//       });
+
+
+//        成功代码MTL和OBJ同时加载，文件复制无法直接使用，需要进行异步加载才能实现你想要的效果，初学者注意了
+       var mtlLoader = new THREE.MTLLoader();
+       mtlLoader.setPath('objMtl/');
+       mtlLoader.load('mtl.mtl', function(materials){
+          materials.preload();
+
+           var objLoader = new THREE.OBJLoader();
+           objLoader.setMaterials(materials);
+           objLoader.setPath('objMtl/');
+           objLoader.load('obj.obj', function(object){
+               object.scale.set(3, 3, 3);
+               object.position.y=60;
+               scene.add(object);
+           },onProgress, onError);
+       });
+
+          // 失败代码
+//        var mtlLoader = new THREE.MTLLoader();
+//        mtlLoader.setCrossOrigin('');
+//        mtlLoader.setPath('mobao/mobaochaifen/');
+//        mtlLoader.load('mobaochaifen.mtl', function(mobaoobj){
+//           mobaoobj.preload();
+//           var objLoader = new THREE.OBJLoader();
+//           objLoader.setMaterials(mobaoobj);
+//           objLoader.setPath('mobao/mobaochaifen/');
+//           objLoader.load('mobaochaifen.obj', function(object){
+//               object.scale.set(3, 3, 3);
+//               object.position.y=60;
+//               scene.add(object);
+//           },onProgress, onError);
+//        });
+
+        //创建灯光
+        var light = new THREE.PointLight(0xffffff);
+        light.position.set(300,400,200);
+        scene.add(light);
+
+        scene.add(new THREE.AmbientLight(0x333333));
+
+        //创建相机、设置相机位置、在网格中间
+        var camera = new THREE.PerspectiveCamera(75, 800/600, 1, 1000);
+        camera.position.set(200,200,200);
+        camera.lookAt(scene.position);
+
+        //创建渲染器、设置渲染器的尺寸、最后将渲染器加入文档之中
+        var renderer = new THREE.WebGLRenderer();
+        renderer.setSize(800, 600);
+        document.body.appendChild(renderer.domElement);
+
+        function render(){
+            renderer.render(scene,camera);
+        }
+        render();
+
+//        渲染需要两个对象，一个是需要渲染的场景、另外一个是里面的相机
+//        renderer.render(scene,camera);
+
+//        创建相机控制
+        var controls = new THREE.OrbitControls(camera);
+        controls.addEventListener('change',render);
+
+//        动画函数渲染出模型,每一帧都出现
+        function animate(){
+            requestAnimationFrame(animate);
+            render();
+        };
+        animate();
+    </script>
+   <!--  实在无法理解请发邮件到yuhang5411@hotmail.com进行提问，欢迎提问，牺牲小我成就大你 -->
+</body>
+</html>
